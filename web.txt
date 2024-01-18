@@ -1,0 +1,18 @@
+- web-app
+  - middleware
+    - auth.js
+  - routes
+    - admin.js
+    - user.js
+  - models
+    - admin.js
+    - user.js
+  - views
+    - login.html
+    - admin_dashboard.html
+    - profile_update.html
+  - public
+    - styles.css
+    - login.js
+  - app.js
+mongodb+srv://mohan:mohan@cluster0.yvc1agc.mongodb.net/DiaryDB?retryWrites=true&w=majority"

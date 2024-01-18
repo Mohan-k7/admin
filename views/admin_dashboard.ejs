@@ -1,0 +1,41 @@
+<!-- admin_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/styles.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Welcome to Admin Dashboard</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Display user data dynamically -->
+                <% for (const user of users) { %>
+                  <tr>
+                      <td><%= user._id %></td>
+                      <td><%= user.username %></td>
+                      <td><img src="<%= user.photo %>" alt="User Photo" class="img-responsive"></td>
+                      <td>
+                          <button class="btn btn-info">View</button>
+                          <!-- Add other actions/buttons as needed -->
+                      </td>
+                  </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr
